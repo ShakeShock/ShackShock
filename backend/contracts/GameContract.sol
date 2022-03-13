@@ -49,6 +49,15 @@ contract GameContract is Ownable {
         token.mint(msg.sender, tokensPerNft);
     }
 
+    function levelUpCharacter(uint _tokenId, uint16 _currentLevel) public onlyOwner {
+        nftCharacter.levelUpShaker(_tokenId, _currentLevel + 1);
+    }
+
+    function improveCivilization(uint _tokenId, uint8 _newCivilization) public onlyOwner {
+        nftCharacter.levelUpShaker(_tokenId, 0);
+        nftCharacter.changeShakerCivilization(_tokenId, _newCivilization);
+    }
+
     function startGame(
         // The ownership of the escrow contract will have to be transfered to this contract
         // Before calling this function the players will have to approve escrow account so it can transferFrom
