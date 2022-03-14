@@ -9,3 +9,18 @@ Shake Shock starts with the creation of Adam and Eve, mere humans that initially
 Civilizations are born, rise and fall. Intimately tied with human nature, groups of people need to communicate and decide the fate of civilizations and their characters. In the meantime, a battle for the world will be fought, earning different civilizations more wealth and power.
 
 [Design doc](https://mirror.xyz/0x37eC246fCD668400Df5dAA5362601dB613BAcC84/iVmb8tLYQHaKfU_HZhjAPdv4rbYv2I6H6neinSTkg4s)
+
+
+## Technical details
+
+> Backend
+- Game contract, central smart contract for handling interactions to the NFT and escrow contracts (solidity)
+- Escrow contract (solidity) - holds $shake in escrow when players stake their tokens before entering into a battle
+- NFT minting contracts (solidity) - players mint a character NFT and asset NFTs used in game
+- $shake ERC20 token (extended from the OpenZeppelin wizard) - players air initially airdropped tokens when minting their character NFT and would eventually be able to earn more $shake from in game activities
+
+> Frontend
+
+- Unity WebGL with multiplayer support via photon
+- Deployed NFT meta data to NFT.Storage
+- Moralis for unity and on-chain integration
