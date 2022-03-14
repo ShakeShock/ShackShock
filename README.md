@@ -18,9 +18,9 @@ Civilizations are born, rise and fall. Intimately tied with human nature, groups
 - Escrow contract (solidity) - holds $shake in escrow when players stake their tokens before entering into a battle
 - NFT minting contracts (solidity) - players mint a character NFT and asset NFTs used in game
 - $shake ERC20 token (extended from the OpenZeppelin wizard) - players air initially airdropped tokens when minting their character NFT and would eventually be able to earn more $shake from in game activities
+- Deployed NFT meta data to NFT.Storage
 
 > Frontend
 
 - Unity WebGL with multiplayer support via photon
-- Deployed NFT meta data to NFT.Storage
 - Moralis for unity and on-chain integration
