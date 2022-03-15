@@ -48,7 +48,11 @@ async function main() {
       StringTools: lib.address,
     },
   });
-  const def = await DefGear.deploy();
+  // Define deployement values
+  const defGearAmounts = [3000, 1000, 500, 100];
+  const defGearprices = ["0", "0", "0", "0"];
+  const defGearUris = ["", "", "", ""];
+  const def = await DefGear.deploy(defGearAmounts, defGearprices, defGearUris);
   await def.deployed();
   console.log("DefGear deployed to:", def.address);
 
@@ -57,8 +61,13 @@ async function main() {
       StringTools: lib.address,
     },
   });
+
+  // Define deployement values
+  const offGearAmounts = [3000, 1000, 500];
+  const offGearprices = ["0", "0", "0"];
+  const offGearUris = ["", "", ""];
   const off = await OffGear.deploy();
-  await off.deployed();
+  await off.deployed(offGearAmounts, offGearprices, offGearUris);
   console.log("OffGear deployed to:", off.address);
 
   const Escrow = await hre.ethers.getContractFactory("Escrow");
