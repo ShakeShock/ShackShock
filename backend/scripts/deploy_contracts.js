@@ -15,15 +15,28 @@ async function main() {
       StringTools: lib.address,
     },
   });
+  // URIś for each combiantion
+  const c000 = "";
+  const c100 = "";
+  const c200 = "";
+  const c001 = "";
+  const c101 = "";
+  const c201 = "";
+  const c010 = "";
+  const c110 = "";
+  const c210 = "";
+  const c011 = "";
+  const c111 = "";
+  const c211 = "";
   const char = await CaracterContract.deploy(
-    [0, 1, 2],
-    [0, 0, 0],
-    [0, 0, 0],
-    ["l1", "l2", "l3"],
+    [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2], // Level
+    [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1], // Civilization
+    [0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1], // Class
+    [c000, c100, c200, c001, c101, c201, c010, c110, c210, c011, c111, c211], // URIs
     [
-      { amount: 7, price: ethers.utils.parseEther("0") },
-      { amount: 2, price: ethers.utils.parseEther("0.03") },
-      { amount: 1, price: ethers.utils.parseEther("0.06") },
+      { amount: 3000, price: ethers.utils.parseEther("0") },
+      { amount: 3000, price: ethers.utils.parseEther("0") },
+      { amount: 3000, price: ethers.utils.parseEther("0") },
     ]
   );
 
