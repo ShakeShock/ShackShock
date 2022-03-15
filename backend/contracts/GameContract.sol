@@ -37,11 +37,11 @@ contract GameContract is Ownable {
     }
 
     function mintNftOffGear(uint _equipmentType) public {
-        nftOffGear.mintEquipment(_equipmentType, msg.sender);
+        nftOffGear.mintEquipment(msg.sender, _equipmentType);
     }
 
     function mintNftDefGear(uint _equipmentType) public {
-        nftDefGear.mintEquipment(_equipmentType, msg.sender);
+        nftDefGear.mintEquipment(msg.sender, _equipmentType);
     }
 
     function mintTokens() private onlyOwner {
