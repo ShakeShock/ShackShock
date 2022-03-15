@@ -32,7 +32,7 @@ contract GameContract is Ownable {
     }
 
     function mintNftCharacter(uint8 _shakerType) public {
-        nftCharacter.mintShaker(_shakerType, msg.sender);
+        nftCharacter.mintShaker(msg.sender, _shakerType);
         mintTokens();
     }
 

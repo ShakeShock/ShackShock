@@ -59,15 +59,15 @@ contract NFTMinting is ERC721, Ownable, ReentrancyGuard {
         }
     }
 
-    function mintShaker(uint8 shakerType, address _caller)
+    function mintShaker(address _caller, uint8 _shakerType)
         external
         payable
         nonReentrant
         onlyOwner
     {
-        require(shakerType < tokenAvailabilty.length, "Invalid shaker type");
+        require(_shakerType < tokenAvailabilty.length, "Invalid shaker type");
 
-        ShakerClass storage classAvalability = tokenAvailabilty[shakerType];
+        ShakerClass storage classAvalability = tokenAvailabilty[_shakerType];
         require(
             classAvalability.amount > 0,
             "No more minting for type selected"
@@ -77,7 +77,7 @@ contract NFTMinting is ERC721, Ownable, ReentrancyGuard {
         classAvalability.amount -= 1;
 
         _safeMint(_caller, _tokenMinted);
-        _shakers[_tokenMinted] = primitiveShaker(shakerType);
+        _shakers[_tokenMinted] = primitiveShaker(_shakerType);
 
         _tokenMinted += 1;
     }
