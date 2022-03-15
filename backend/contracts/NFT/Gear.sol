@@ -10,7 +10,7 @@ import "../tools/StringTools.sol";
 abstract contract Gear is ERC721, Ownable {
     using StringTools for string;
 
-    uint256 private _tokenId;
+    uint256 private _tokenMinted;
 
     struct Equipment {
         uint256 amount;
@@ -37,7 +37,7 @@ abstract contract Gear is ERC721, Ownable {
            );
            _equipmentURI.push(_uris[i]);
         }
-        _tokenId = 0;
+        _tokenMinted = 0;
     }
 
     // Check if player has the requirements to mint this equipment
@@ -53,12 +53,12 @@ abstract contract Gear is ERC721, Ownable {
             "Insuficient funds for buying this equipment"
         );
 
-        _safeMint(account, _tokenId);
-        _equipment[_tokenId] = _equipmentType;
+        _safeMint(account, _tokenMinted);
+        _equipment[_tokenMinted] = _equipmentType;
 
         Equipment storage eq = equipmentAvailability[_equipmentType];
         eq.amount -= 1;
-        _tokenId += 1;
+        _tokenMinted += 1;
     }
 
     function tokenURI(uint _tokenId) public view virtual override returns (string memory) {

@@ -63,6 +63,7 @@ contract NFTMinting is ERC721, Ownable, ReentrancyGuard {
         external
         payable
         nonReentrant
+        onlyOwner
     {
         require(shakerType < tokenAvailabilty.length, "Invalid shaker type");
 
