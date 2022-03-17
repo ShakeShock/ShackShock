@@ -27,9 +27,9 @@ Civilizations are born, rise and fall. Intimately tied with human nature, groups
 
 ## Links
 
-ETHGlobal Showcase: https://showcase.ethglobal.com/buildquest/shake-shock-domcc
-Website: https://www.shakeshock.xyz/
-Discord Server: https://discord.gg/tY7yr3KT
+- ETHGlobal Showcase: https://showcase.ethglobal.com/buildquest/shake-shock-domcc
+- Website: https://www.shakeshock.xyz/
+- Discord Server: https://discord.gg/tY7yr3KT
 
 ## Screenshots
 
