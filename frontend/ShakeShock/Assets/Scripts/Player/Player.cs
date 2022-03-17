@@ -67,12 +67,6 @@ public class Player : MonoBehaviour
 
     #region Monobehaviors
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Load all NFT data here
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "ElectricOrb")
