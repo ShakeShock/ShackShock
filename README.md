@@ -25,6 +25,12 @@ Civilizations are born, rise and fall. Intimately tied with human nature, groups
 - Unity WebGL with multiplayer support via photon
 - Moralis for unity and on-chain integration
 
+## Links
+
+ETHGlobal Showcase: https://showcase.ethglobal.com/buildquest/shake-shock-domcc
+Website: https://www.shakeshock.xyz/
+Discord Server: https://discord.gg/tY7yr3KT
+
 ## Screenshots
 
 ![Screenshot 2022-03-14 at 20 47 00](https://user-images.githubusercontent.com/35449333/158258447-f942c4a8-cc74-4bf8-bcb0-41de38070216.png)
